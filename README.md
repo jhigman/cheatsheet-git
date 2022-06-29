@@ -3,7 +3,7 @@
 
 ## merge when parent branch has already been merged
 
-i.e. branched "foo" from master, then branched "bar" from "foo"
+branched "foo" from master, then branched "bar" from "foo"
 and now foo has been merged into master WITH SQUASH
 
 ```
@@ -18,7 +18,7 @@ now bar is a child of master
 
 ## undo commit before it's been pushed
 
-i.e. commited some changes, but haven't pushed
+commited some changes, but haven't pushed
 
 ```
 git reset HEAD~1
