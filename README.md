@@ -14,3 +14,13 @@ git push --force origin bar
 
 now bar is a child of master
 
+
+
+## undo commit before it's been pushed
+
+i.e. commited some changes, but haven't pushed
+
+```
+git reset HEAD~1
+```
+
