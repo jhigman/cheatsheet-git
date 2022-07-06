@@ -24,3 +24,8 @@ commited some changes, but haven't pushed
 git reset HEAD~1
 ```
 
+## remove untracked files and directories
+
+```
+git clean -fd
+```
