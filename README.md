@@ -52,3 +52,12 @@ git reset HEAD~1
 ```
 git clean -fd
 ```
+
+## edit commit message
+
+committed some changes, but haven't pushed - and there's a typo in the commit message:
+
+```
+git commit --amend
+```
+
