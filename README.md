@@ -61,3 +61,14 @@ committed some changes, but haven't pushed - and there's a typo in the commit me
 git commit --amend
 ```
 
+## change the name of a branch (local and remote)
+
+change the name and replace the remote branch 
+
+```
+git checkout <old_name>
+git branch -m <new_name>
+git push origin -u <new_name>
+git push origin --delete <old_name>
+```
+
