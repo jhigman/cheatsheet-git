@@ -72,3 +72,15 @@ git push origin -u <new_name>
 git push origin --delete <old_name>
 ```
 
+## fetch a file from a specific branch or commit
+
+made some change in this branch, but want to revert to a file as seen in another branch or commit
+
+```
+git checkout master -- <filepath>
+```
+or
+```
+git restore -s <sha1> -- <filepath>
+```
+
