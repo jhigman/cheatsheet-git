@@ -84,3 +84,21 @@ or
 git restore -s <sha1> -- <filepath>
 ```
 
+## upload an existing project
+
+project exists on the local machine but isn't in a repo yet
+
+create the empty repo in github, and grab the <url>
+
+```
+git init
+git add -A
+git commit -m 'Added my project'
+git remote add origin <url>
+git push -u -f origin main
+```
+
+
+
+
+
