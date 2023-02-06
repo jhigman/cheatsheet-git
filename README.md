@@ -98,7 +98,12 @@ git remote add origin <url>
 git push -u -f origin main
 ```
 
+## delete branch locally and remotely
 
+```
+git branch -d localBranchName // delete branch locally
+git push origin --delete remoteBranchName // delete branch remotely
+```
 
 
 
