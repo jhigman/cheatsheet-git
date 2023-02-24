@@ -105,5 +105,11 @@ git branch -d localBranchName // delete branch locally
 git push origin --delete remoteBranchName // delete branch remotely
 ```
 
+## stash single file
+
+```
+git stash -- <filename>
+```
+
 
 
