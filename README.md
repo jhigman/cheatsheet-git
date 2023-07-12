@@ -111,5 +111,11 @@ git push origin --delete remoteBranchName // delete branch remotely
 git stash -- <filename>
 ```
 
+## find what branch a commit came from
+
+```
+git branch -a --contains <commit>
+```
+
 
 
