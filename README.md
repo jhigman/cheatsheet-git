@@ -119,7 +119,8 @@ git branch -a --contains <commit>
 
 ## restore a file that was deleted
 
-If the file was deleted in commit sha <sha>:
+If the file (or directory) was deleted in commit sha <sha>:
 ```
 git checkout <sha>~1 path/to/file.ext
+git checkout <sha>~1 path/to/directory/
 ```
