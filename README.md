@@ -117,5 +117,9 @@ git stash -- <filename>
 git branch -a --contains <commit>
 ```
 
+## restore a file that was deleted
 
-
+If the file was deleted in commit sha <sha>:
+```
+git checkout <sha>~1 path/to/file.ext
+```
