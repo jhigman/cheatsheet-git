@@ -124,3 +124,11 @@ If the file (or directory) was deleted in commit sha <sha>:
 git checkout <sha>~1 path/to/file.ext
 git checkout <sha>~1 path/to/directory/
 ```
+
+## remove all files deleted by a branch but still in master
+
+When changes have been made to the master version of files, which have then been deleted in our branch (and we want to keep the deletions):
+
+```
+git diff --name-only --diff-filter=U | xargs git rm
+```
