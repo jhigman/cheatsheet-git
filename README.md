@@ -132,3 +132,12 @@ When changes have been made to the master version of files, which have then been
 ```
 git diff --name-only --diff-filter=U | xargs git rm
 ```
+
+## merge after a branch-from-a-branch, and the first branch has been squash-merged
+
+See: https://stackoverflow.com/questions/22593087/merging-a-branch-of-a-branch-after-first-branch-is-squashed-when-merged-to-maste
+
+```
+# replay all commits, starting at feature_branch exclusive, through dependent_feature inclusive, onto master
+git rebase --onto master feature_branch dependent_feature
+```
