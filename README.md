@@ -137,7 +137,8 @@ git diff --name-only --diff-filter=U | xargs git rm
 
 See: https://stackoverflow.com/questions/22593087/merging-a-branch-of-a-branch-after-first-branch-is-squashed-when-merged-to-maste
 
+Replays all commits, starting at feature_branch exclusive, through dependent_feature inclusive, onto master
+
 ```
-# replay all commits, starting at feature_branch exclusive, through dependent_feature inclusive, onto master
 git rebase --onto master feature_branch dependent_feature
 ```
