@@ -142,3 +142,9 @@ Replays all commits, starting at feature_branch exclusive, through dependent_fea
 ```
 git rebase --onto master feature_branch dependent_feature
 ```
+
+## checkout remote version of branch replacing local (changed) branch
+
+```
+git reset --hard origin/master
+```
