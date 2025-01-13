@@ -148,3 +148,11 @@ git rebase --onto master feature_branch dependent_feature
 ```
 git reset --hard origin/master
 ```
+
+## checkout patch of commit and apply to another directory
+
+```
+git format-patch -1 <commit-sha>
+git apply -v --directory=<new-dir> 0001-some-changes.patch
+```
+
