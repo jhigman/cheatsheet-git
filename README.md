@@ -156,3 +156,10 @@ git format-patch -1 <commit-sha>
 git apply -v --directory=<new-dir> 0001-some-changes.patch
 ```
 
+## find when a file was deleted and restore it
+
+```
+git log --diff-filter=D --summary
+git checkout <commit-sha>~1 <path/to/file>
+```
+
