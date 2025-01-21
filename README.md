@@ -81,7 +81,7 @@ git checkout master -- <filepath>
 ```
 or
 ```
-git restore -s <sha1> -- <filepath>
+git restore -s <commit-sha> -- <filepath>
 ```
 
 ## upload an existing project
@@ -114,15 +114,17 @@ git stash -- <filename>
 ## find what branch a commit came from
 
 ```
-git branch -a --contains <commit>
+git branch -a --contains <commit-sha>
 ```
 
 ## restore a file that was deleted
 
-If the file (or directory) was deleted in commit sha <sha>:
+Find the commit where a file was deleted and restore it:
+
 ```
-git checkout <sha>~1 path/to/file.ext
-git checkout <sha>~1 path/to/directory/
+git log --diff-filter=D --summary
+git checkout <commit-sha>~1 path/to/file.ext
+git checkout <commit-sha>~1 path/to/directory/
 ```
 
 ## remove all files deleted by a branch but still in master
@@ -155,11 +157,3 @@ git reset --hard origin/master
 git format-patch -1 <commit-sha>
 git apply -v --directory=<new-dir> 0001-some-changes.patch
 ```
-
-## find when a file was deleted and restore it
-
-```
-git log --diff-filter=D --summary
-git checkout <commit-sha>~1 <path/to/file>
-```
-
