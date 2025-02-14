@@ -157,3 +157,11 @@ git reset --hard origin/master
 git format-patch -1 <commit-sha>
 git apply -v --directory=<new-dir> 0001-some-changes.patch
 ```
+
+## revert a commit that was a squash merge
+
+```
+git revert -m1 <commit-sha>
+```
+
+and then push
