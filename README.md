@@ -165,3 +165,26 @@ git revert -m1 <commit-sha>
 ```
 
 and then push
+
+
+## split a PR into separate PRs
+
+If too many changes are in the PR, branch from the feature branch and then reset to main - then adjust the changes for this branch
+
+```
+git checkout -b <new-smaller-branch>
+git reset --soft master
+git checkout main -- <path/to/file1/to/drop>
+git checkout main -- <path/to/file2/to/drop>
+git stash -p
+```
+
+DON'T COMMIT YET.. you're just staging changes back to master for some files..
+
+```
+git reset --soft <new-smaller-branch>
+git commit -am "Rolled back stuff.."
+git push
+``
+
+You should end up with the new-smaller-branch with just the changes that you didn't remove by stashing or restoring..
