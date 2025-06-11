@@ -47,6 +47,25 @@ commited some changes, but haven't pushed
 git reset HEAD~1
 ```
 
+## undo commit AFTER it's been pushed
+
+commited some changes to branch1, and pushed - but the changes should have been made in branch2
+
+```
+git checkout branch2
+git cherry-pick <sha of bad commit>
+git push origin branch2
+```
+
+then fix up branch1 if necessary
+
+```
+git checkout branch1
+git revert <sha of bad commit>
+git push origin branch1
+```
+
+
 ## remove untracked files and directories
 
 ```
