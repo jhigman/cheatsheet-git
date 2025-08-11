@@ -47,6 +47,14 @@ commited some changes, but haven't pushed
 git reset HEAD~1
 ```
 
+## undo add before it's been committed
+
+added some changes (i.e. staged the files, with `git add -A`, but haven't done commit (and want to preserve all the changes):
+
+```
+git reset
+```
+
 ## undo commit AFTER it's been pushed
 
 commited some changes to branch1, and pushed - but the changes should have been made in branch2
