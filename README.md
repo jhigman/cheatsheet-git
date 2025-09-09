@@ -37,6 +37,32 @@ git merge-base feature-b-off-a feature-a
 from https://stackoverflow.com/a/70994400/9598220
 
 
+## OR merge after a branch-from-a-branch, and the first branch has been squash-merged
+
+See: https://stackoverflow.com/questions/22593087/merging-a-branch-of-a-branch-after-first-branch-is-squashed-when-merged-to-maste
+
+Replays all commits, starting at feature_branch exclusive, through dependent_feature inclusive, onto master
+
+```
+git rebase --onto master feature_branch dependent_feature
+```
+
+
+## OR YET ANOTHER merge after a branch-from-a-branch, and the first branch has been squash-merged, USING SHAs
+
+See: https://stackoverflow.com/questions/7744049/git-how-to-rebase-to-a-specific-commit
+
+If main->foo->bar, and foo has been squash merged to main:
+
+Find the commit where bar was branched from foo - call it old parent.
+
+Find commit in main where foo changes were merged - call it new parent.
+
+We want bar to be rebased onto main at the new parent commit..
+
+```
+git rebase --onto <new parent> <old parent>
+```
 
 
 ## undo commit before it's been pushed
@@ -160,16 +186,6 @@ When changes have been made to the master version of files, which have then been
 
 ```
 git diff --name-only --diff-filter=U | xargs git rm
-```
-
-## merge after a branch-from-a-branch, and the first branch has been squash-merged
-
-See: https://stackoverflow.com/questions/22593087/merging-a-branch-of-a-branch-after-first-branch-is-squashed-when-merged-to-maste
-
-Replays all commits, starting at feature_branch exclusive, through dependent_feature inclusive, onto master
-
-```
-git rebase --onto master feature_branch dependent_feature
 ```
 
 ## checkout remote version of branch replacing local (changed) branch
